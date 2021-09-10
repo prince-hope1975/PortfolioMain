@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(true);
   return (
     <AppContext.Provider
       value={{

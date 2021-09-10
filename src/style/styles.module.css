@@ -16,10 +16,13 @@ svg {
   z-index: 1;
   height: clamp(500px, 90vh, 10vh);
   transition: transform 500ms ease-in-out 0.5s;
+  position: fixed;
+  top:0;
+  width: 100vw;
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .nav {
-    display: flex;
+    height: max-content;
   }
   .nav svg {
     display: none;
@@ -33,6 +36,14 @@ svg {
   width: 100%;
   padding-top: 3rem;
   transition: transform 500ms ease-in-out 0.5s;
+}
+@media (min-width: 500px) {
+  .nav ul {
+    background: linear-gradient(to right, #a063fd, #8d43fc);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
 }
 .nav a {
   color: white;
@@ -57,8 +68,9 @@ svg {
 }
 
 .hamBurger {
-  position: absolute;
-  z-index: 0;
+  position: fixed;
+  /* top */
+  z-index: 1;
   top: 0;
   left: 0;
   transition: all 500ms ease-out;
@@ -72,7 +84,8 @@ svg {
 .visible {
   transform: translate(-100%, -100%);
 }
-.visible .svg1, .visible ul {
+.visible .svg1,
+.visible ul {
   transform: translate(-100%, -100%);
 }
 .visible .svg2 {
@@ -93,6 +106,11 @@ svg {
   position: relative;
   width: 100%;
   height: 100%;
+}
+.icon{
+  position: fixed;
+  top:1rem;
+  right: 1rem
 }
 
 /*# sourceMappingURL=styles.module.css.map */

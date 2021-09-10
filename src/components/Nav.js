@@ -11,9 +11,11 @@ import {
   hamBurger,
   cancel,
   relative,
+  icon
 } from "../style/styles.module.css";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
+import {purple} from  "../style/main.module.css"
 const Nav = () => {
   const {state, setState} = useGlobalContext()
   const toggelNav = (e) => {
@@ -23,6 +25,7 @@ const Nav = () => {
   return (<>
   
           <div className={`${hamBurger} ${!state&& visible}`} onClick={toggelNav}>
+            <div className={`${icon} ${purple}`}>Valorant Pro</div>
             <BiMenuAltLeft />
           </div>
     <nav
