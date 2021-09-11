@@ -16,7 +16,7 @@ import {
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 import {purple} from  "../style/main.module.css"
-const Nav = () => {
+const Nav = ({Link}) => {
   const {state, setState} = useGlobalContext()
   const toggelNav = (e) => {
     console.log(state);
@@ -34,7 +34,7 @@ const Nav = () => {
     >
       {/* <span>Valorant Prince</span> */}
       <div className={relative}>
-          <Ul state={state} {...toggelNav} />
+          <Ul state={state} {...toggelNav} Link={Link}/>
           <FirstBlob />
           <SecondBlob />
           <div className={cancel} onClick={toggelNav}>
@@ -45,20 +45,20 @@ const Nav = () => {
   </>
   );
 };
-const Ul = () => {
+const Ul = ({Link}) => {
   return (
     <ul className={navItems}>
       <li>
-        <a href="#">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="#">About</a>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="#">Projects</a>
+        <Link to="/Projects">Projects</Link>
       </li>
       <li>
-        <a href="#">Blog</a>
+        <Link to="/Blog">Blog</Link>
       </li>
     </ul>
   );

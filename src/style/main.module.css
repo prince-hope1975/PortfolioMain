@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
 :root {
-  font-size: 18px;
+  font-size: 16px;
+}
+@media (min-width: 500px) {
+  :root {
+    font-size: 18px;
+  }
 }
 
 .main {
@@ -11,6 +16,8 @@
   display: grid;
   place-items: center;
   margin-top: 7rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -73,6 +80,29 @@ h1 {
   justify-content: space-around;
   margin: auto;
   margin-top: 2rem;
+}
+
+.container {
+  width: clamp(400px, 70vw ,700px);
+  margin: auto;
+  padding-top: 3em;
+}
+
+.tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
+  padding: 1em;
+  gap: 2em;
+}
+.tech :nth-child(1) {
+  color: #e7862a;
+}
+.tech :nth-child(2) {
+  color: #e9e91e;
+}
+.tech :nth-child(3) {
+  color: #3535c2;
 }
 
 /*# sourceMappingURL=main.module.css.map */
